@@ -51,7 +51,7 @@ var Player = function(x, y) {
 
 Player.prototype.update = function() {
     for (var i = 0; i < allEnemies.length; i++) {
-        if ((this.y == allEnemies[i].y) && (this.x <= allEnemies[i].x + 35) && (this.x >= allEnemies[i].x - 30)) {
+        if ((this.y == allEnemies[i].y) && (this.x < allEnemies[i].x + 101) && (this.x + 101 > allEnemies[i].x)) {
             this.reset();
         }
     }
